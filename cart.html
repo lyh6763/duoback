@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="듀오백 장바구니">
+  <title>장바구니 | DUOBACK</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="cart.html">
+  <meta property="og:title" content="장바구니 | DUOBACK">
+  <meta property="og:description" content="선택하신 듀오백 제품을 확인하고 구매하세요.">
+  <meta property="og:image" content="images/products/DK-073W(1).jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="cart.html">
+  <meta property="twitter:title" content="장바구니 | DUOBACK">
+  <meta property="twitter:description" content="선택하신 듀오백 제품을 확인하고 구매하세요.">
+  <meta property="twitter:image" content="images/products/DK-073W(1).jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Newsreader:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ========================================
+       Header
+       ======================================== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <!-- Logo -->
+        <a href="index.html" class="header__logo">
+          DUOBACK
+        </a>
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+          <a href="products.html" class="header__nav-link">제품</a>
+          <a href="brand.html" class="header__nav-link">브랜드</a>
+          <a href="support.html" class="header__nav-link">고객지원</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="header__actions">
+          <button class="header__action-btn" aria-label="검색">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <a href="cart.html" class="header__action-btn header__action-btn--active" aria-label="장바구니">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge">0</span>
+          </a>
+          <button class="header__action-btn" aria-label="로그인">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="header__menu-btn" aria-label="메뉴 열기" aria-controls="mobileMenu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- // Header -->
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="모바일 메뉴">
+    <div class="mobile-menu__overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu__container">
+      <div class="mobile-menu__header">
+        <a href="index.html" class="mobile-menu__logo">DUOBACK</a>
+        <button class="mobile-menu__close" id="mobileMenuClose" aria-label="메뉴 닫기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="products.html" class="mobile-menu__link">제품</a>
+        <a href="brand.html" class="mobile-menu__link">브랜드</a>
+        <a href="support.html" class="mobile-menu__link">고객지원</a>
+      </nav>
+
+      <div class="mobile-menu__categories">
+        <h3 class="mobile-menu__title">제품 카테고리</h3>
+        <a href="products.html?category=office" class="mobile-menu__category">사무용</a>
+        <a href="products.html?category=student" class="mobile-menu__category">학생용</a>
+        <a href="products.html?category=gaming" class="mobile-menu__category">게이밍</a>
+        <a href="products.html?category=premium" class="mobile-menu__category">프리미엄</a>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="cart.html" class="mobile-menu__action mobile-menu__action--active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          장바구니
+        </a>
+        <button class="mobile-menu__action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          로그인
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // Mobile Menu -->
+
+  <!-- ========================================
+       Main Content
+       ======================================== -->
+  <main class="main">
+
+    <!-- Cart Page -->
+    <section class="cart-page">
+      <div class="container">
+        <span class="eyebrow cart-page__eyebrow">Order Summary</span>
+        <h1 class="cart-page__title">장바구니</h1>
+
+        <!-- Empty Cart -->
+        <div class="cart-empty" id="cartEmpty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <h2>장바구니가 비어있습니다</h2>
+          <p>관심 있는 제품을 장바구니에 담아보세요</p>
+          <a href="products.html" class="btn btn--primary">제품 보러가기</a>
+        </div>
+
+        <!-- Cart Content -->
+        <div class="cart-content" id="cartContent">
+          <div class="cart-items" id="cartItems">
+            <!-- Cart items will be inserted here by JavaScript -->
+          </div>
+
+          <div class="cart-summary">
+            <h2 class="cart-summary__title">주문 요약</h2>
+
+            <div class="cart-summary__row">
+              <span>상품 금액</span>
+              <span id="subtotal">₩0</span>
+            </div>
+
+            <div class="cart-summary__row">
+              <span>배송비</span>
+              <span id="shipping">무료</span>
+            </div>
+
+            <div class="cart-summary__divider"></div>
+
+            <div class="cart-summary__row cart-summary__row--total">
+              <span>총 결제 금액</span>
+              <strong id="total">₩0</strong>
+            </div>
+
+            <button class="btn btn--primary btn--large cart-summary__checkout" id="checkoutBtn">
+              결제하기
+            </button>
+
+            <button class="btn btn--secondary btn--large" onclick="window.location.href='products.html'">
+              쇼핑 계속하기
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- // Cart Page -->
+
+  </main>
+  <!-- // Main Content -->
+
+  <!-- ========================================
+       Footer
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <!-- Logo -->
+      <a href="index.html" class="footer__logo">
+        DUOBACK
+      </a>
+
+      <!-- Content -->
+      <div class="footer__content">
+        <!-- Column 1: 제품 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">제품</h4>
+          <ul class="footer__links">
+            <li><a href="products.html?category=office" class="footer__link">사무용</a></li>
+            <li><a href="products.html?category=student" class="footer__link">학생용</a></li>
+            <li><a href="products.html?category=gaming" class="footer__link">게이밍</a></li>
+            <li><a href="products.html?category=premium" class="footer__link">프리미엄</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: 고객지원 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">고객지원</h4>
+          <ul class="footer__links">
+            <li><a href="support.html#faq" class="footer__link">FAQ</a></li>
+            <li><a href="support.html#as" class="footer__link">A/S 신청</a></li>
+            <li><a href="support.html#stores" class="footer__link">매장 안내</a></li>
+            <li><a href="support.html#contact" class="footer__link">1:1 문의</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: 회사정보 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">회사정보</h4>
+          <ul class="footer__links">
+            <li><a href="brand.html" class="footer__link">회사소개</a></li>
+            <li><a href="#location" class="footer__link">오시는 길</a></li>
+            <li><a href="#recruit" class="footer__link">채용 안내</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: SNS -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">SNS</h4>
+          <div class="footer__sns">
+            <a href="#instagram" class="footer__sns-link" aria-label="인스타그램">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+              </svg>
+            </a>
+            <a href="#facebook" class="footer__sns-link" aria-label="페이스북">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#youtube" class="footer__sns-link" aria-label="유튜브">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="none" stroke="#2D2A26" stroke-width="2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 DUOBACK. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#privacy" class="footer__legal-link">개인정보처리방침</a>
+          <a href="#terms" class="footer__legal-link">이용약관</a>
+        </div>
+      </div>
+    </div>
+    <div class="visually-hidden" aria-hidden="false">
+      <div id="location">오시는 길 안내는 준비 중입니다.</div>
+      <div id="recruit">채용 안내는 준비 중입니다.</div>
+      <div id="privacy">개인정보처리방침 안내는 준비 중입니다.</div>
+      <div id="terms">이용약관 안내는 준비 중입니다.</div>
+      <div id="instagram">인스타그램 채널은 준비 중입니다.</div>
+      <div id="facebook">페이스북 채널은 준비 중입니다.</div>
+      <div id="youtube">유튜브 채널은 준비 중입니다.</div>
+    </div>
+  </footer>
+  <!-- // Footer -->
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle" aria-hidden="true">
+    <div class="search-modal__overlay" aria-hidden="true"></div>
+    <div class="search-modal__container">
+      <div class="search-modal__header">
+        <h2 id="searchModalTitle" class="visually-hidden">제품 검색</h2>
+        <input type="search" id="searchInput" class="search-modal__input" placeholder="제품 검색..." autocomplete="off" aria-label="제품 검색" aria-describedby="searchEmpty">
+        <button class="search-modal__clear" id="searchClear" style="display: none;" aria-label="검색어 지우기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <button class="search-modal__close" id="searchClose" aria-label="검색 모달 닫기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-modal__content" aria-live="polite" aria-atomic="true">
+        <!-- Empty State -->
+        <div class="search-empty" id="searchEmpty" role="status" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <p>검색어를 입력해주세요</p>
+        </div>
+
+        <!-- No Results State -->
+        <div class="search-no-results" id="searchNoResults" style="display: none;" role="status" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+          <p>검색 결과가 없습니다</p>
+        </div>
+
+        <!-- Search Results -->
+        <div class="search-results" id="searchResults" aria-live="polite" aria-relevant="additions text"></div>
+      </div>
+    </div>
+  </div>
+  <!-- // Search Modal -->
+
+  <!-- JS -->
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/cart-page.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

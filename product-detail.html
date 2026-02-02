@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="듀오백 제품 상세 정보">
+  <title>제품 상세 | DUOBACK</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="product-detail.html">
+  <meta property="og:title" content="제품 상세 | DUOBACK">
+  <meta property="og:description" content="듀오백 제품의 상세 정보를 확인하세요.">
+  <meta property="og:image" content="images/products/DK-073W(1).jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="product-detail.html">
+  <meta property="twitter:title" content="제품 상세 | DUOBACK">
+  <meta property="twitter:description" content="듀오백 제품의 상세 정보를 확인하세요.">
+  <meta property="twitter:image" content="images/products/DK-073W(1).jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Newsreader:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/product-detail.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ========================================
+       Header
+       ======================================== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <!-- Logo -->
+        <a href="index.html" class="header__logo">
+          DUOBACK
+        </a>
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+          <a href="products.html" class="header__nav-link">제품</a>
+          <a href="brand.html" class="header__nav-link">브랜드</a>
+          <a href="support.html" class="header__nav-link">고객지원</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="header__actions">
+          <button class="header__action-btn" aria-label="검색">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <a href="cart.html" class="header__action-btn" aria-label="장바구니">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge">0</span>
+          </a>
+          <button class="header__action-btn" aria-label="로그인">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="header__menu-btn" aria-label="메뉴 열기" aria-controls="mobileMenu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- // Header -->
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="모바일 메뉴">
+    <div class="mobile-menu__overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu__container">
+      <div class="mobile-menu__header">
+        <a href="index.html" class="mobile-menu__logo">DUOBACK</a>
+        <button class="mobile-menu__close" id="mobileMenuClose" aria-label="메뉴 닫기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="products.html" class="mobile-menu__link mobile-menu__link--active">제품</a>
+        <a href="brand.html" class="mobile-menu__link">브랜드</a>
+        <a href="support.html" class="mobile-menu__link">고객지원</a>
+      </nav>
+
+      <div class="mobile-menu__categories">
+        <h3 class="mobile-menu__title">제품 카테고리</h3>
+        <a href="products.html?category=office" class="mobile-menu__category">사무용</a>
+        <a href="products.html?category=student" class="mobile-menu__category">학생용</a>
+        <a href="products.html?category=gaming" class="mobile-menu__category">게이밍</a>
+        <a href="products.html?category=premium" class="mobile-menu__category">프리미엄</a>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="cart.html" class="mobile-menu__action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          장바구니
+        </a>
+        <button class="mobile-menu__action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          로그인
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // Mobile Menu -->
+
+  <!-- ========================================
+       Main Content
+       ======================================== -->
+  <main class="main">
+
+    <!-- Product Info Section -->
+    <section class="product-info">
+      <div class="container">
+        <div class="product-info__container">
+
+          <!-- Product Gallery -->
+          <div class="product-gallery">
+            <div class="product-gallery__main">
+              <img src="images/products/DK-073W(1).jpg" alt="DK-073W 메인 이미지" id="mainImage" width="800" height="800">
+            </div>
+            <div class="product-gallery__thumbnails">
+              <button class="thumbnail thumbnail--active" data-image="images/products/DK-073W(1).jpg">
+                <img src="images/products/DK-073W(1).jpg" alt="메인 이미지" width="100" height="100">
+              </button>
+              <button class="thumbnail" data-image="images/products/DK-073W(2).jpg">
+                <img src="images/products/DK-073W(2).jpg" alt="측면 이미지" width="100" height="100">
+              </button>
+              <button class="thumbnail" data-image="images/products/DK-073W(3).jpg">
+                <img src="images/products/DK-073W(3).jpg" alt="후면 이미지" width="100" height="100">
+              </button>
+              <button class="thumbnail" data-image="images/products/DK-073W(4).jpg">
+                <img src="images/products/DK-073W(4).jpg" alt="디테일 이미지" width="100" height="100">
+              </button>
+              <button class="thumbnail" data-image="images/products/DK-073W(5).jpg">
+                <img src="images/products/DK-073W(5).jpg" alt="라이프스타일 이미지" width="100" height="100">
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="product-details">
+            <p class="eyebrow product-details__eyebrow">Precision Series</p>
+            <h1 class="product-details__title">DK-073W</h1>
+            <p class="product-details__category">학생용 의자</p>
+
+            <div class="product-details__price">
+              <span class="price-current">₩650,000</span>
+              <span class="price-original" style="display: none;">₩0</span>
+            </div>
+
+            <div class="product-details__divider"></div>
+
+            <!-- Color Selection -->
+            <div class="product-option">
+              <h3 class="product-option__label">컬러</h3>
+              <div class="color-selector">
+                <button class="color-option color-option--active" data-color="블랙" aria-label="블랙 선택">
+                  <span class="color-swatch" style="background-color: #000000;"></span>
+                  <span class="color-name">블랙</span>
+                </button>
+                <button class="color-option" data-color="블루" aria-label="블루 선택">
+                  <span class="color-swatch" style="background-color: #2196F3;"></span>
+                  <span class="color-name">블루</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="product-details__divider"></div>
+
+            <!-- Quantity Selection -->
+            <div class="product-option">
+              <h3 class="product-option__label">수량</h3>
+              <div class="quantity-selector">
+                <button class="quantity-btn quantity-btn--minus" aria-label="수량 감소">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+                <input type="number" class="quantity-input" value="1" min="1" max="99" aria-label="수량">
+                <button class="quantity-btn quantity-btn--plus" aria-label="수량 증가">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="product-details__actions">
+              <button class="btn btn--secondary btn--large">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                장바구니 담기
+              </button>
+              <button class="btn btn--primary btn--large">바로 구매하기</button>
+            </div>
+
+            <!-- Product Features -->
+            <div class="product-features">
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>인체공학 설계</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>3년 품질 보증</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+                <span>무료 배송</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- // Product Info Section -->
+
+    <!-- Tab Section -->
+    <section class="product-tabs">
+      <div class="container">
+        <!-- Tab Navigation -->
+        <div class="tabs-nav" role="tablist" aria-label="제품 상세 탭">
+          <button class="tab-btn tab-btn--active" id="tab-detail" role="tab" data-tab="detail" aria-controls="detail" aria-selected="true" tabindex="0">상세정보</button>
+          <button class="tab-btn" id="tab-specs" role="tab" data-tab="specs" aria-controls="specs" aria-selected="false" tabindex="-1">스펙</button>
+          <button class="tab-btn" id="tab-reviews" role="tab" data-tab="reviews" aria-controls="reviews" aria-selected="false" tabindex="-1">리뷰</button>
+          <button class="tab-btn" id="tab-shipping" role="tab" data-tab="shipping" aria-controls="shipping" aria-selected="false" tabindex="-1">배송안내</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tabs-content">
+
+          <!-- Detail Tab -->
+          <div class="tab-panel tab-panel--active" id="detail" role="tabpanel" aria-labelledby="tab-detail" aria-hidden="false">
+            <div class="tab-panel__inner">
+              <h2 class="tab-panel__title">제품 상세 정보</h2>
+
+              <div class="detail-section">
+                <h3>DK-073W의 특징</h3>
+                <p>DK-073W는 성장기 학생들을 위해 설계된 인체공학 의자입니다.
+                올바른 자세 유지와 집중력 향상을 위한 최적의 설계로,
+                장시간 학습에도 편안함을 제공합니다.</p>
+
+                <img src="images/products/Q1W_메쉬(1).jpg" alt="제품 상세 이미지 1" loading="lazy" width="1200" height="600">
+
+                <h3>듀얼백 시스템</h3>
+                <p>상부와 하부 등받이가 독립적으로 움직여 척추의 자연스러운 곡선을 따라 최적의 지지력을 제공합니다.
+                어떤 자세에서도 편안함을 유지할 수 있습니다.</p>
+
+                <img src="images/products/D3-HS_메쉬(2).jpg" alt="듀얼백 시스템" loading="lazy" width="1200" height="600">
+
+                <h3>에어 메쉬 소재</h3>
+                <p>통기성이 뛰어난 프리미엄 메쉬 소재를 사용하여 장시간 사용해도 쾌적함을 유지합니다.</p>
+
+                <img src="images/products/D2500G-DASW(2).jpg" alt="에어 메쉬 소재" loading="lazy" width="1200" height="600">
+              </div>
+            </div>
+          </div>
+
+          <!-- Specs Tab -->
+          <div class="tab-panel" id="specs" role="tabpanel" aria-labelledby="tab-specs" aria-hidden="true">
+            <div class="tab-panel__inner">
+              <h2 class="tab-panel__title">제품 사양</h2>
+
+              <table class="specs-table">
+                <caption class="visually-hidden">제품 사양 표</caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">제품명</th>
+                    <td>DK-073W</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">카테고리</th>
+                    <td>학생용 의자</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">크기 (W x D x H)</th>
+                    <td>670 x 670 x 1150~1250mm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">좌판 높이</th>
+                    <td>450~550mm (가스압 조절)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">등받이 높이</th>
+                    <td>650mm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">팔걸이</th>
+                    <td>4D 조절 가능 (높이, 좌우, 전후, 각도)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">소재</th>
+                    <td>프리미엄 에어 메쉬, 나일론 베이스</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">컬러</th>
+                    <td>블랙, 블루</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">최대 하중</th>
+                    <td>120kg</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">원산지</th>
+                    <td>대한민국</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">품질보증</th>
+                    <td>3년</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">KC 인증</th>
+                    <td>KC-AB-1234-5678</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Reviews Tab -->
+          <div class="tab-panel" id="reviews" role="tabpanel" aria-labelledby="tab-reviews" aria-hidden="true">
+            <div class="tab-panel__inner">
+              <h2 class="tab-panel__title">고객 리뷰</h2>
+
+              <div class="reviews-summary">
+                <div class="reviews-summary__rating">
+                  <div class="rating-number">4.8</div>
+                  <div class="rating-stars">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" opacity="0.3">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div class="rating-count">128개 리뷰</div>
+                </div>
+              </div>
+
+              <div class="reviews-list">
+                <!-- Review Item 1 -->
+                <article class="review-item">
+                  <div class="review-header">
+                    <div class="review-author">
+                      <strong>김**</strong>
+                      <div class="review-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="review-date">2026.01.15</div>
+                  </div>
+                  <div class="review-content">
+                    <p>재택근무하면서 하루 8시간 이상 앉아있는데 전혀 불편함이 없어요.
+                    특히 허리 지지력이 정말 좋습니다. 가격은 있지만 그만한 가치가 있는 것 같아요.</p>
+                  </div>
+                </article>
+
+                <!-- Review Item 2 -->
+                <article class="review-item">
+                  <div class="review-header">
+                    <div class="review-author">
+                      <strong>이**</strong>
+                      <div class="review-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" opacity="0.3">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="review-date">2026.01.10</div>
+                  </div>
+                  <div class="review-content">
+                    <p>메쉬 소재라 여름에도 시원하게 사용할 수 있을 것 같아요.
+                    조립도 생각보다 간단했고, 디자인도 깔끔해서 사무실에 잘 어울립니다.</p>
+                  </div>
+                </article>
+
+                <!-- Review Item 3 -->
+                <article class="review-item">
+                  <div class="review-header">
+                    <div class="review-author">
+                      <strong>박**</strong>
+                      <div class="review-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="review-date">2026.01.05</div>
+                  </div>
+                  <div class="review-content">
+                    <p>허리 디스크가 있어서 의자 선택에 신중했는데,
+                    듀오백 의자는 정말 편하네요. 장시간 앉아도 허리 통증이 없어졌어요. 강력 추천합니다!</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping Tab -->
+          <div class="tab-panel" id="shipping" role="tabpanel" aria-labelledby="tab-shipping" aria-hidden="true">
+            <div class="tab-panel__inner">
+              <h2 class="tab-panel__title">배송 안내</h2>
+
+              <div class="shipping-info">
+                <h3>배송 정보</h3>
+                <ul>
+                  <li><strong>배송비:</strong> 무료 배송</li>
+                  <li><strong>배송 기간:</strong> 주문 후 2-3 영업일 (도서산간 지역 제외)</li>
+                  <li><strong>배송 방법:</strong> 택배 / 화물 배송</li>
+                  <li><strong>배송 조회:</strong> 마이페이지에서 실시간 확인 가능</li>
+                </ul>
+
+                <h3>교환 및 반품 안내</h3>
+                <ul>
+                  <li><strong>교환/반품 기간:</strong> 상품 수령 후 7일 이내</li>
+                  <li><strong>교환/반품 비용:</strong> 고객 변심 시 왕복 배송비 고객 부담</li>
+                  <li><strong>교환/반품 불가:</strong>
+                    <ul>
+                      <li>상품을 사용하거나 훼손한 경우</li>
+                      <li>포장을 개봉하여 상품 가치가 훼손된 경우</li>
+                      <li>시간이 경과하여 재판매가 곤란한 경우</li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <h3>A/S 안내</h3>
+                <ul>
+                  <li><strong>품질 보증 기간:</strong> 구매일로부터 3년</li>
+                  <li><strong>A/S 접수:</strong> 고객센터 (1588-1234) 또는 홈페이지</li>
+                  <li><strong>무상 A/S:</strong> 제품 하자로 인한 경우</li>
+                  <li><strong>유상 A/S:</strong> 고객 과실로 인한 파손</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- // Tab Section -->
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <div class="container">
+        <h2 class="section-title">함께 보면 좋은 제품</h2>
+
+        <div class="product-grid">
+          <!-- Product Card 1 -->
+          <article class="product-card">
+            <a href="product-detail.html?id=q1w" class="product-card__link">
+              <div class="product-card__image">
+                <img src="images/products/Q1W_메쉬(1).jpg" alt="Q1W 메쉬" loading="lazy" width="600" height="600">
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Q1W 메쉬</h3>
+                <p class="product-card__category">사무용 의자</p>
+                <div class="product-card__colors">
+                  <span class="color-dot" style="background-color: #000000;" aria-label="블랙"></span>
+                  <span class="color-dot" style="background-color: #9E9E9E;" aria-label="그레이"></span>
+                </div>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">₩890,000</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card">
+            <a href="product-detail.html?id=d3hs" class="product-card__link">
+              <div class="product-card__image">
+                <img src="images/products/D3-HS_메쉬(1).jpg" alt="D3-HS 메쉬" loading="lazy" width="600" height="600">
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">D3-HS 메쉬</h3>
+                <p class="product-card__category">사무용 의자</p>
+                <div class="product-card__colors">
+                  <span class="color-dot" style="background-color: #000000;" aria-label="블랙"></span>
+                  <span class="color-dot" style="background-color: #FFFFFF; border: 1px solid #E5E2DC;" aria-label="화이트"></span>
+                </div>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">₩780,000</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card">
+            <a href="product-detail.html?id=d043w" class="product-card__link">
+              <div class="product-card__image">
+                <img src="images/products/D-043W_PLUS.jpg" alt="D-043W PLUS" loading="lazy" width="600" height="600">
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">D-043W PLUS</h3>
+                <p class="product-card__category">학생용 의자</p>
+                <div class="product-card__colors">
+                  <span class="color-dot" style="background-color: #000000;" aria-label="블랙"></span>
+                  <span class="color-dot" style="background-color: #2196F3;" aria-label="블루"></span>
+                </div>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">₩520,000</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card">
+            <a href="product-detail.html?id=d2500g" class="product-card__link">
+              <div class="product-card__image">
+                <img src="images/products/D2500G-DASW(1).jpg" alt="D2500G-DASW" loading="lazy" width="600" height="600">
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">D2500G-DASW</h3>
+                <p class="product-card__category">사무용 의자</p>
+                <div class="product-card__colors">
+                  <span class="color-dot" style="background-color: #000000;" aria-label="블랙"></span>
+                  <span class="color-dot" style="background-color: #9E9E9E;" aria-label="그레이"></span>
+                </div>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">₩950,000</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- // Related Products -->
+
+  </main>
+  <!-- // Main Content -->
+
+  <!-- ========================================
+       Footer
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <!-- Logo -->
+      <a href="index.html" class="footer__logo">
+        DUOBACK
+      </a>
+
+      <!-- Content -->
+      <div class="footer__content">
+        <!-- Column 1: 제품 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">제품</h4>
+          <ul class="footer__links">
+            <li><a href="products.html?category=office" class="footer__link">사무용</a></li>
+            <li><a href="products.html?category=student" class="footer__link">학생용</a></li>
+            <li><a href="products.html?category=gaming" class="footer__link">게이밍</a></li>
+            <li><a href="products.html?category=premium" class="footer__link">프리미엄</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: 고객지원 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">고객지원</h4>
+          <ul class="footer__links">
+            <li><a href="support.html#faq" class="footer__link">FAQ</a></li>
+            <li><a href="support.html#as" class="footer__link">A/S 신청</a></li>
+            <li><a href="support.html#stores" class="footer__link">매장 안내</a></li>
+            <li><a href="support.html#contact" class="footer__link">1:1 문의</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: 회사정보 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">회사정보</h4>
+          <ul class="footer__links">
+            <li><a href="brand.html" class="footer__link">회사소개</a></li>
+            <li><a href="#location" class="footer__link">오시는 길</a></li>
+            <li><a href="#recruit" class="footer__link">채용 안내</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: SNS -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">SNS</h4>
+          <div class="footer__sns">
+            <a href="#instagram" class="footer__sns-link" aria-label="인스타그램">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+              </svg>
+            </a>
+            <a href="#facebook" class="footer__sns-link" aria-label="페이스북">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#youtube" class="footer__sns-link" aria-label="유튜브">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="none" stroke="#2D2A26" stroke-width="2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 DUOBACK. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#privacy" class="footer__legal-link">개인정보처리방침</a>
+          <a href="#terms" class="footer__legal-link">이용약관</a>
+        </div>
+      </div>
+    </div>
+    <div class="visually-hidden" aria-hidden="false">
+      <div id="location">오시는 길 안내는 준비 중입니다.</div>
+      <div id="recruit">채용 안내는 준비 중입니다.</div>
+      <div id="privacy">개인정보처리방침 안내는 준비 중입니다.</div>
+      <div id="terms">이용약관 안내는 준비 중입니다.</div>
+      <div id="instagram">인스타그램 채널은 준비 중입니다.</div>
+      <div id="facebook">페이스북 채널은 준비 중입니다.</div>
+      <div id="youtube">유튜브 채널은 준비 중입니다.</div>
+    </div>
+  </footer>
+  <!-- // Footer -->
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle" aria-hidden="true">
+    <div class="search-modal__overlay" aria-hidden="true"></div>
+    <div class="search-modal__container">
+      <div class="search-modal__header">
+        <h2 id="searchModalTitle" class="visually-hidden">제품 검색</h2>
+        <input type="search" id="searchInput" class="search-modal__input" placeholder="제품 검색..." autocomplete="off" aria-label="제품 검색" aria-describedby="searchEmpty">
+        <button class="search-modal__clear" id="searchClear" style="display: none;" aria-label="검색어 지우기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <button class="search-modal__close" id="searchClose" aria-label="검색 모달 닫기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-modal__content" aria-live="polite" aria-atomic="true">
+        <!-- Empty State -->
+        <div class="search-empty" id="searchEmpty" role="status" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <p>검색어를 입력해주세요</p>
+        </div>
+
+        <!-- No Results State -->
+        <div class="search-no-results" id="searchNoResults" style="display: none;" role="status" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+          <p>검색 결과가 없습니다</p>
+        </div>
+
+        <!-- Search Results -->
+        <div class="search-results" id="searchResults" aria-live="polite" aria-relevant="additions text"></div>
+      </div>
+    </div>
+  </div>
+  <!-- // Search Modal -->
+
+  <!-- JS -->
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/product-detail.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

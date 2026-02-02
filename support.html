@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="듀오백 고객지원 - FAQ, A/S 신청, 매장 안내, 1:1 문의">
+  <title>고객지원 | DUOBACK</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="support.html">
+  <meta property="og:title" content="고객지원 | DUOBACK">
+  <meta property="og:description" content="듀오백 고객지원 센터. FAQ, A/S 신청, 매장 안내, 1:1 문의를 통해 최상의 서비스를 제공합니다.">
+  <meta property="og:image" content="images/products/DK-073W(1).jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="support.html">
+  <meta property="twitter:title" content="고객지원 | DUOBACK">
+  <meta property="twitter:description" content="듀오백 고객지원 센터. FAQ, A/S 신청, 매장 안내, 1:1 문의를 통해 최상의 서비스를 제공합니다.">
+  <meta property="twitter:image" content="images/products/DK-073W(1).jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Newsreader:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/support.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ========================================
+       Header
+       ======================================== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <!-- Logo -->
+        <a href="index.html" class="header__logo">
+          DUOBACK
+        </a>
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+          <a href="products.html" class="header__nav-link">제품</a>
+          <a href="brand.html" class="header__nav-link">브랜드</a>
+          <a href="support.html" class="header__nav-link header__nav-link--active">고객지원</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="header__actions">
+          <button class="header__action-btn" aria-label="검색">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <a href="cart.html" class="header__action-btn" aria-label="장바구니">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge">0</span>
+          </a>
+          <button class="header__action-btn" aria-label="로그인">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="header__menu-btn" aria-label="메뉴 열기" aria-controls="mobileMenu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- // Header -->
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="모바일 메뉴">
+    <div class="mobile-menu__overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu__container">
+      <div class="mobile-menu__header">
+        <a href="index.html" class="mobile-menu__logo">DUOBACK</a>
+        <button class="mobile-menu__close" id="mobileMenuClose" aria-label="메뉴 닫기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="products.html" class="mobile-menu__link">제품</a>
+        <a href="brand.html" class="mobile-menu__link">브랜드</a>
+        <a href="support.html" class="mobile-menu__link mobile-menu__link--active">고객지원</a>
+      </nav>
+
+      <div class="mobile-menu__categories">
+        <h3 class="mobile-menu__title">제품 카테고리</h3>
+        <a href="products.html?category=office" class="mobile-menu__category">사무용</a>
+        <a href="products.html?category=student" class="mobile-menu__category">학생용</a>
+        <a href="products.html?category=gaming" class="mobile-menu__category">게이밍</a>
+        <a href="products.html?category=premium" class="mobile-menu__category">프리미엄</a>
+      </div>
+
+      <div class="mobile-menu__actions">
+        <a href="cart.html" class="mobile-menu__action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          장바구니
+        </a>
+        <button class="mobile-menu__action">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          로그인
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // Mobile Menu -->
+
+  <!-- ========================================
+       Main Content
+       ======================================== -->
+  <main class="main">
+
+    <!-- Support Hero -->
+    <section class="support-hero">
+      <div class="container">
+        <p class="eyebrow support-hero__eyebrow">Support Center</p>
+        <h1 class="support-hero__title">고객지원</h1>
+        <p class="support-hero__subtitle">궁금하신 사항이 있으신가요? 언제든지 도와드리겠습니다.</p>
+      </div>
+    </section>
+    <!-- // Support Hero -->
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+      <div class="container">
+        <div class="quick-links__grid">
+          <a href="#faq" class="quick-link-card">
+            <div class="quick-link-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="quick-link-card__title">FAQ</h3>
+            <p class="quick-link-card__description">자주 묻는 질문</p>
+          </a>
+
+          <a href="#as" class="quick-link-card">
+            <div class="quick-link-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <h3 class="quick-link-card__title">A/S 신청</h3>
+            <p class="quick-link-card__description">제품 수리 접수</p>
+          </a>
+
+          <a href="#stores" class="quick-link-card">
+            <div class="quick-link-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="quick-link-card__title">매장 안내</h3>
+            <p class="quick-link-card__description">전국 매장 정보</p>
+          </a>
+
+          <a href="#contact" class="quick-link-card">
+            <div class="quick-link-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="quick-link-card__title">1:1 문의</h3>
+            <p class="quick-link-card__description">개별 상담 신청</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- // Quick Links -->
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+      <div class="container">
+        <div class="contact-info__grid">
+          <div class="contact-info__card">
+            <div class="contact-info__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <h3 class="contact-info__title">고객센터</h3>
+            <p class="contact-info__detail">1588-1234</p>
+            <p class="contact-info__time">평일 09:00 - 18:00</p>
+          </div>
+
+          <div class="contact-info__card">
+            <div class="contact-info__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <h3 class="contact-info__title">이메일</h3>
+            <p class="contact-info__detail">support@duoback.com</p>
+            <p class="contact-info__time">24시간 접수 가능</p>
+          </div>
+
+          <div class="contact-info__card">
+            <div class="contact-info__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="contact-info__title">카카오톡</h3>
+            <p class="contact-info__detail">@듀오백</p>
+            <p class="contact-info__time">평일 09:00 - 18:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // Contact Info -->
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">자주 묻는 질문</h2>
+
+        <div class="faq-categories">
+          <button class="faq-category-btn faq-category-btn--active" data-category="all">전체</button>
+          <button class="faq-category-btn" data-category="product">제품</button>
+          <button class="faq-category-btn" data-category="delivery">배송</button>
+          <button class="faq-category-btn" data-category="as">A/S</button>
+          <button class="faq-category-btn" data-category="payment">결제/환불</button>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item" data-category="product">
+            <button class="faq-item__question" id="faq-question-1" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>제품의 보증 기간은 얼마나 되나요?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden="true">
+              <p>듀오백 제품은 구매일로부터 3년간 무상 A/S를 제공합니다. 단, 고객 과실로 인한 파손은 유상 처리됩니다.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item" data-category="delivery">
+            <button class="faq-item__question" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>배송 기간은 얼마나 걸리나요?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden="true">
+              <p>주문 확인 후 2-3 영업일 내 배송됩니다. 도서산간 지역은 추가 1-2일이 소요될 수 있습니다.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item" data-category="product">
+            <button class="faq-item__question" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>의자 조립이 어렵지 않나요?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden="true">
+              <p>모든 제품에 상세한 조립 설명서가 포함되어 있으며, 대부분 30분 이내에 조립 가능합니다. 유튜브에서 조립 영상도 확인하실 수 있습니다.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item" data-category="payment">
+            <button class="faq-item__question" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>교환 및 환불은 어떻게 하나요?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" aria-hidden="true">
+              <p>제품 수령 후 7일 이내에 고객센터로 연락주시면 교환 또는 환불이 가능합니다. 단, 제품 사용 흔적이 있거나 포장이 훼손된 경우 교환/환불이 불가능할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item" data-category="as">
+            <button class="faq-item__question" id="faq-question-5" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>A/S는 어디서 받을 수 있나요?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" aria-hidden="true">
+              <p>고객센터(1588-1234)로 연락 주시거나 홈페이지에서 A/S를 신청하시면 전담 직원이 방문하여 처리해드립니다. 전국 서비스센터 방문도 가능합니다.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item" data-category="delivery">
+            <button class="faq-item__question" id="faq-question-6" aria-expanded="false" aria-controls="faq-answer-6">
+              <span>배송비는 얼마인가요?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" aria-hidden="true">
+              <p>전 제품 무료 배송입니다. 도서산간 지역도 추가 배송비 없이 무료로 배송해드립니다.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 7 -->
+          <div class="faq-item" data-category="product">
+            <button class="faq-item__question" id="faq-question-7" aria-expanded="false" aria-controls="faq-answer-7">
+              <span>제품의 최대 하중은 얼마인가요?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-7" role="region" aria-labelledby="faq-question-7" aria-hidden="true">
+              <p>제품마다 다르지만, 대부분의 듀오백 의자는 120kg까지 안전하게 사용 가능합니다. 프리미엄 라인은 최대 130kg까지 지원합니다.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 8 -->
+          <div class="faq-item" data-category="payment">
+            <button class="faq-item__question" id="faq-question-8" aria-expanded="false" aria-controls="faq-answer-8">
+              <span>할부 구매가 가능한가요?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer" id="faq-answer-8" role="region" aria-labelledby="faq-question-8" aria-hidden="true">
+              <p>네, 모든 신용카드로 2-12개월 무이자 할부가 가능합니다. 카드사별 무이자 혜택은 결제 페이지에서 확인하실 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // FAQ Section -->
+
+    <!-- A/S Request Section -->
+    <section class="as-section" id="as">
+      <div class="container">
+        <h2 class="section-title">A/S 신청</h2>
+        <p class="section-subtitle">제품에 문제가 있으신가요? A/S를 신청해주세요.</p>
+
+        <form class="support-form" id="asForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="asName" class="form-label">이름 <span class="required">*</span></label>
+              <input type="text" id="asName" name="name" class="form-input" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="asPhone" class="form-label">연락처 <span class="required">*</span></label>
+              <input type="tel" id="asPhone" name="phone" class="form-input" placeholder="010-1234-5678" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="asEmail" class="form-label">이메일 <span class="required">*</span></label>
+            <input type="email" id="asEmail" name="email" class="form-input" placeholder="example@email.com" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="asProduct" class="form-label">제품명 <span class="required">*</span></label>
+              <select id="asProduct" name="product" class="form-select" required>
+                <option value="">제품 선택</option>
+                <option value="Q1W">Q1W 메쉬</option>
+                <option value="DK-073W">DK-073W</option>
+                <option value="D3-HS">D3-HS 메쉬</option>
+                <option value="D-043W">D-043W PLUS</option>
+                <option value="D2500G">D2500G-DASW</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="asPurchaseDate" class="form-label">구매일 <span class="required">*</span></label>
+              <input type="date" id="asPurchaseDate" name="purchaseDate" class="form-input" autocomplete="off" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="asIssue" class="form-label">증상 <span class="required">*</span></label>
+            <textarea id="asIssue" name="issue" class="form-textarea" rows="5" placeholder="증상을 상세히 적어주세요" autocomplete="off" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large">A/S 신청하기</button>
+        </form>
+      </div>
+    </section>
+    <!-- // A/S Request Section -->
+
+    <!-- Stores Section -->
+    <section class="stores-section" id="stores">
+      <div class="container">
+        <h2 class="section-title">매장 안내</h2>
+        <p class="section-subtitle">전국 듀오백 매장에서 제품을 직접 체험해보세요.</p>
+
+        <div class="stores-grid">
+          <!-- Store 1 -->
+          <div class="store-card">
+            <h3 class="store-card__name">서울 강남점</h3>
+            <div class="store-card__info">
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>서울시 강남구 테헤란로 123</span>
+              </div>
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>02-1234-5678</span>
+              </div>
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>평일 10:00 - 20:00 / 주말 10:00 - 18:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Store 2 -->
+          <div class="store-card">
+            <h3 class="store-card__name">부산 센텀점</h3>
+            <div class="store-card__info">
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>부산시 해운대구 센텀중앙로 78</span>
+              </div>
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>051-2345-6789</span>
+              </div>
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>평일 10:00 - 20:00 / 주말 10:00 - 18:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Store 3 -->
+          <div class="store-card">
+            <h3 class="store-card__name">대구 동성로점</h3>
+            <div class="store-card__info">
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>대구시 중구 동성로 45</span>
+              </div>
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>053-3456-7890</span>
+              </div>
+              <div class="store-card__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>평일 10:00 - 20:00 / 주말 10:00 - 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // Stores Section -->
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2 class="section-title">1:1 문의</h2>
+        <p class="section-subtitle">궁금하신 사항을 남겨주시면 빠르게 답변드리겠습니다.</p>
+
+        <form class="support-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName" class="form-label">이름 <span class="required">*</span></label>
+              <input type="text" id="contactName" name="name" class="form-input" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactPhone" class="form-label">연락처 <span class="required">*</span></label>
+              <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="010-1234-5678" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">이메일 <span class="required">*</span></label>
+            <input type="email" id="contactEmail" name="email" class="form-input" placeholder="example@email.com" autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject" class="form-label">문의 유형 <span class="required">*</span></label>
+            <select id="contactSubject" name="subject" class="form-select" required>
+              <option value="">선택해주세요</option>
+              <option value="product">제품 문의</option>
+              <option value="delivery">배송 문의</option>
+              <option value="as">A/S 문의</option>
+              <option value="payment">결제/환불 문의</option>
+              <option value="etc">기타</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage" class="form-label">문의 내용 <span class="required">*</span></label>
+            <textarea id="contactMessage" name="message" class="form-textarea" rows="8" placeholder="문의 내용을 자세히 적어주세요" autocomplete="off" required></textarea>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <input type="checkbox" id="privacyAgree" name="privacyAgree" required>
+            <label for="privacyAgree">개인정보 수집 및 이용에 동의합니다</label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large">문의하기</button>
+        </form>
+      </div>
+    </section>
+    <!-- // Contact Form Section -->
+
+  </main>
+  <!-- // Main Content -->
+
+  <!-- ========================================
+       Footer
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <!-- Logo -->
+      <a href="index.html" class="footer__logo">
+        DUOBACK
+      </a>
+
+      <!-- Content -->
+      <div class="footer__content">
+        <!-- Column 1: 제품 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">제품</h4>
+          <ul class="footer__links">
+            <li><a href="products.html?category=office" class="footer__link">사무용</a></li>
+            <li><a href="products.html?category=student" class="footer__link">학생용</a></li>
+            <li><a href="products.html?category=gaming" class="footer__link">게이밍</a></li>
+            <li><a href="products.html?category=premium" class="footer__link">프리미엄</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: 고객지원 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">고객지원</h4>
+          <ul class="footer__links">
+            <li><a href="support.html#faq" class="footer__link">FAQ</a></li>
+            <li><a href="support.html#as" class="footer__link">A/S 신청</a></li>
+            <li><a href="support.html#stores" class="footer__link">매장 안내</a></li>
+            <li><a href="support.html#contact" class="footer__link">1:1 문의</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: 회사정보 -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">회사정보</h4>
+          <ul class="footer__links">
+            <li><a href="brand.html" class="footer__link">회사소개</a></li>
+            <li><a href="#location" class="footer__link">오시는 길</a></li>
+            <li><a href="#recruit" class="footer__link">채용 안내</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: SNS -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">SNS</h4>
+          <div class="footer__sns">
+            <a href="#instagram" class="footer__sns-link" aria-label="인스타그램">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+              </svg>
+            </a>
+            <a href="#facebook" class="footer__sns-link" aria-label="페이스북">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#youtube" class="footer__sns-link" aria-label="유튜브">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="none" stroke="#2D2A26" stroke-width="2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 DUOBACK. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#privacy" class="footer__legal-link">개인정보처리방침</a>
+          <a href="#terms" class="footer__legal-link">이용약관</a>
+        </div>
+      </div>
+    </div>
+    <div class="visually-hidden" aria-hidden="false">
+      <div id="location">오시는 길 안내는 준비 중입니다.</div>
+      <div id="recruit">채용 안내는 준비 중입니다.</div>
+      <div id="privacy">개인정보처리방침 안내는 준비 중입니다.</div>
+      <div id="terms">이용약관 안내는 준비 중입니다.</div>
+      <div id="instagram">인스타그램 채널은 준비 중입니다.</div>
+      <div id="facebook">페이스북 채널은 준비 중입니다.</div>
+      <div id="youtube">유튜브 채널은 준비 중입니다.</div>
+    </div>
+  </footer>
+  <!-- // Footer -->
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle" aria-hidden="true">
+    <div class="search-modal__overlay" aria-hidden="true"></div>
+    <div class="search-modal__container">
+      <div class="search-modal__header">
+        <h2 id="searchModalTitle" class="visually-hidden">제품 검색</h2>
+        <input type="search" id="searchInput" class="search-modal__input" placeholder="제품 검색..." autocomplete="off" aria-label="제품 검색" aria-describedby="searchEmpty">
+        <button class="search-modal__clear" id="searchClear" style="display: none;" aria-label="검색어 지우기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <button class="search-modal__close" id="searchClose" aria-label="검색 모달 닫기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-modal__content" aria-live="polite" aria-atomic="true">
+        <!-- Empty State -->
+        <div class="search-empty" id="searchEmpty" role="status" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <p>검색어를 입력해주세요</p>
+        </div>
+
+        <!-- No Results State -->
+        <div class="search-no-results" id="searchNoResults" style="display: none;" role="status" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+          <p>검색 결과가 없습니다</p>
+        </div>
+
+        <!-- Search Results -->
+        <div class="search-results" id="searchResults" aria-live="polite" aria-relevant="additions text"></div>
+      </div>
+    </div>
+  </div>
+  <!-- // Search Modal -->
+
+  <!-- JS -->
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/support.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

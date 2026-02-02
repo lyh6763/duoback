@@ -1,0 +1,498 @@
+/* ========================================
+   Products Page Styles
+   ======================================== */
+
+/* ----------------------------------------
+   Page Header
+   ---------------------------------------- */
+
+.page-header {
+  padding: var(--space-10) 0;
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header__content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.page-header__eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.page-header__title {
+  margin-bottom: var(--space-1);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.page-header__subtitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-regular);
+  color: var(--color-text-secondary);
+  font-family: var(--font-secondary);
+}
+
+.page-header__count {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+}
+
+.page-header__count strong {
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+
+/* ----------------------------------------
+   Filter Bar
+   ---------------------------------------- */
+
+.filter-bar {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 100;
+  padding: var(--space-4) 0;
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-normal);
+}
+
+/* 스크롤 시 그림자 효과 */
+.filter-bar.is-scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-bar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.filter-bar__left {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.filter-bar__right {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Select Wrapper */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--color-text-secondary);
+  pointer-events: none;
+}
+
+/* Filter Select */
+.filter-select {
+  appearance: none;
+  padding: var(--space-2) var(--space-8) var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.filter-select:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.filter-select:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+}
+
+.view-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.view-toggle:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+.view-toggle--active {
+  background-color: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+  color: var(--color-text-white);
+}
+
+
+/* ----------------------------------------
+   Products Section
+   ---------------------------------------- */
+
+.products-section {
+  padding: var(--space-10) 0;
+  background-color: var(--color-bg-primary);
+  min-height: 60vh;
+}
+
+/* Product Grid - 재사용 (main.css에서 정의) */
+/* 추가 스타일만 여기에 작성 */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* List View */
+.product-grid--list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.product-grid--list .product-card__link {
+  display: flex;
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+.product-grid--list .product-card__image {
+  width: 220px;
+  flex: 0 0 220px;
+}
+
+.product-grid--list .product-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-card__summary,
+.product-card__highlights,
+.product-card__color-chips,
+.product-card__actions {
+  display: none;
+}
+
+.product-card__summary {
+  margin: var(--space-3) 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+.product-card__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.product-card__color-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.color-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 10px;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.color-chip__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+}
+
+.color-chip.is-active {
+  color: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+}
+
+.color-chip:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.product-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.product-card__actions {
+  display: flex;
+  gap: var(--space-3);
+  padding: 0 var(--space-6) var(--space-6);
+}
+
+.btn--small {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.product-grid--list .product-card__summary,
+.product-grid--list .product-card__highlights,
+.product-grid--list .product-card__color-chips,
+.product-grid--list .product-card__actions {
+  display: flex;
+}
+
+.product-grid--list .product-card__summary {
+  display: block;
+}
+
+.product-grid--list .product-card__color-chips {
+  display: flex;
+}
+
+.product-grid--list .product-card__colors {
+  display: flex;
+}
+
+.product-card__colors .color-dot.is-active {
+  box-shadow: 0 0 0 2px var(--color-text-primary);
+}
+
+.products-empty {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12) var(--space-4);
+  background-color: var(--color-bg-white);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.products-empty__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.products-empty__desc {
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 768px) {
+  .product-grid--list .product-card__link {
+    flex-direction: column;
+  }
+
+  .product-grid--list .product-card__image {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .product-grid--list .product-card__actions {
+    flex-direction: column;
+    padding: 0 var(--space-4) var(--space-4);
+  }
+}
+
+
+/* ----------------------------------------
+   Pagination
+   ---------------------------------------- */
+
+.pagination-section {
+  padding: var(--space-10) 0;
+  background-color: var(--color-bg-primary);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+/* Pagination Button */
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.pagination__btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pagination__btn:hover:not(:disabled) {
+  color: var(--color-accent);
+}
+
+.pagination__btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Pagination Numbers */
+.pagination__numbers {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.pagination__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.pagination__number:hover {
+  color: var(--color-accent);
+  background-color: rgba(196, 120, 90, 0.1);
+}
+
+.pagination__number--active {
+  color: var(--color-text-white);
+  background-color: var(--color-text-primary);
+  border-radius: var(--radius-full);
+}
+
+.pagination__number--active:hover {
+  background-color: var(--color-accent);
+}
+
+
+/* ----------------------------------------
+   Load More Button (Alternative to Pagination)
+   ---------------------------------------- */
+
+.load-more {
+  text-align: center;
+}
+
+.load-more__btn {
+  padding: var(--space-4) var(--space-12);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.load-more__btn:hover {
+  border-color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+}
+
+.load-more__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* ----------------------------------------
+   Empty State
+   ---------------------------------------- */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-24) var(--space-6);
+  text-align: center;
+}
+
+.empty-state__icon {
+  margin-bottom: var(--space-6);
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.empty-state__icon svg {
+  width: 80px;
+  height: 80px;
+}
+
+.empty-state__title {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.empty-state__description {
+  margin-bottom: var(--space-8);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+}

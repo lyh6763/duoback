@@ -1,0 +1,336 @@
+/* ========================================
+   Brand Page Styles
+   ======================================== */
+
+/* ----------------------------------------
+   Brand Hero
+   ---------------------------------------- */
+
+.brand-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+              url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop') center/cover;
+  text-align: center;
+  color: var(--color-text-white);
+}
+
+.brand-hero__content {
+  max-width: 800px;
+  padding: 0 var(--container-padding);
+  animation: fadeInUp 0.8s ease;
+}
+
+.brand-hero__eyebrow {
+  margin-bottom: var(--space-3);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.brand-hero__title {
+  margin-bottom: var(--space-3);
+  font-size: 5rem;
+  font-weight: var(--font-bold);
+  font-family: var(--font-secondary);
+  letter-spacing: 0.1em;
+  line-height: var(--leading-tight);
+}
+
+.brand-hero__subtitle {
+  margin-bottom: var(--space-6);
+  font-size: var(--text-xl);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-regular);
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.brand-hero__description {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-medium);
+  line-height: var(--leading-snug);
+}
+
+
+/* ----------------------------------------
+   Brand Philosophy
+   ---------------------------------------- */
+
+.brand-philosophy {
+  padding: var(--space-24) 0;
+  background-color: var(--color-bg-white);
+}
+
+.brand-philosophy__content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brand-philosophy__title {
+  margin-bottom: var(--space-12);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.brand-philosophy__quote {
+  margin-bottom: var(--space-12);
+  padding: var(--space-12);
+  background-color: var(--color-bg-secondary);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+.brand-philosophy__quote p {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-medium);
+  font-style: italic;
+  line-height: var(--leading-snug);
+  color: var(--color-text-primary);
+}
+
+.brand-philosophy__text {
+  font-size: var(--text-xl);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+
+/* ----------------------------------------
+   Technology Section
+   ---------------------------------------- */
+
+.technology {
+  padding: var(--space-24) 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-12);
+  margin-top: var(--space-12);
+}
+
+/* Tech Card */
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-12);
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.tech-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tech-card__icon {
+  margin-bottom: var(--space-6);
+  color: var(--color-accent);
+}
+
+.tech-card__icon svg {
+  width: 80px;
+  height: 80px;
+}
+
+.tech-card__title {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.tech-card__description {
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+
+/* ----------------------------------------
+   History Timeline
+   ---------------------------------------- */
+
+.history {
+  padding: var(--space-24) 0;
+  background-color: var(--color-bg-white);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: var(--space-12) auto 0;
+  padding-left: var(--space-16);
+}
+
+/* Timeline Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--color-border);
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Timeline Dot */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--space-16) * -1 - 9px);
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-accent);
+  border: 3px solid var(--color-bg-white);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 0 3px var(--color-border);
+}
+
+.timeline-item__year {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  font-family: var(--font-secondary);
+  color: var(--color-text-white);
+  background-color: var(--color-text-primary);
+  border-radius: var(--radius-sm);
+}
+
+.timeline-item__content {
+  padding-left: var(--space-6);
+}
+
+.timeline-item__title {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.timeline-item__description {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+
+/* ----------------------------------------
+   Values Section
+   ---------------------------------------- */
+
+.values {
+  padding: var(--space-24) 0;
+  background-color: var(--color-bg-primary);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+/* Value Card */
+.value-card {
+  padding: var(--space-10);
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.value-card__number {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  font-family: var(--font-secondary);
+  color: var(--color-accent);
+  opacity: 0.3;
+}
+
+.value-card__title {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.value-card__description {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+
+/* ----------------------------------------
+   Brand CTA
+   ---------------------------------------- */
+
+.brand-cta {
+  padding: var(--space-24) 0;
+  background-color: var(--color-text-primary);
+  text-align: center;
+}
+
+.brand-cta__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.brand-cta__title {
+  margin-bottom: var(--space-8);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-white);
+}
+
+.brand-cta .btn--primary {
+  background-color: var(--color-accent);
+}
+
+.brand-cta .btn--primary:hover {
+  background-color: var(--color-text-white);
+  color: var(--color-text-primary);
+}
+
+
+/* ----------------------------------------
+   Utility Classes
+   ---------------------------------------- */
+
+.section-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  font-family: var(--font-secondary);
+  letter-spacing: -0.02em;
+}
